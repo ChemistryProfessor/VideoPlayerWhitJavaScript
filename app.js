@@ -187,7 +187,8 @@ $.addEventListener("keydown" , e => {
 
         case " ":
             toggleVideoPlayBack();
-            console.log("ck");
+            videoImage.style.display = "none";
+            mainVideo.style.display = "flex";
             break;
 
         default:
