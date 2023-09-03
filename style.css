@@ -1,0 +1,227 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    background: none;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(72deg, #000000, #15a660, #000000);
+    background-size: 800% 800%;
+    -webkit-animation: AnimationName 10s ease infinite;
+    -moz-animation: AnimationName 10s ease infinite;
+    -o-animation: AnimationName 10s ease infinite;
+    animation: AnimationName 10s ease infinite;
+}
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 79%}
+    50%{background-position:100% 22%}
+    100%{background-position:0% 79%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 79%}
+    50%{background-position:100% 22%}
+    100%{background-position:0% 79%}
+}
+@-o-keyframes AnimationName {
+    0%{background-position:0% 79%}
+    50%{background-position:100% 22%}
+    100%{background-position:0% 79%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 79%}
+    50%{background-position:100% 22%}
+    100%{background-position:0% 79%}
+}
+body , .video-controls, .video-timer, .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    max-width: 900px;
+    width: 98%;
+    background: #000;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.container.fullscreen {
+    max-width: 100%;
+    width: 100%;
+}
+.wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -15px;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .08s ease;
+}
+.container.show-controls .wrapper {
+    bottom: 0;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all .13s ease;
+}
+.wrapper::before {
+    content: "";
+    bottom: 0;
+    width: 100%;
+    height: calc(100% + 35px);
+    z-index: -1;
+    position: absolute;
+    background: #000;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent );
+}
+.video-timeline {
+    height: 7px;
+    width: 100%;
+    cursor: pointer;
+}
+.video-timeline  .progress-area {
+    height: 3px;
+    position: relative;
+    background: rgba(255,255,255,0.6);
+}
+.progress-area span {
+    position: absolute;
+    left: 50%;
+    color: #fff;
+    top: -25px;
+    transform: translateX(-50%);
+}
+.progress-area .progress-bar {
+    width: 0;
+    height: 100%;
+    position: relative;
+    background: #3aff8c;
+}
+.progress-area .progress-bar::before {
+    content: "";
+    right: 0;
+    top: 50%;
+    width: 13px;
+    height: 13px;
+    background: inherit;
+    position: absolute;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+.progress-area span, .progress-area .progress-bar::before {
+    display: none;
+}
+.video-timeline:hover .progress-area span, 
+.video-timeline:hover .progress-area .progress-bar::before {
+    display: block;
+}
+.video-controls {
+    padding: 5px 20px 10px;
+}
+.video-controls .options {
+    width: 100%;
+}
+.video-controls .options:first-child {
+    justify-content: flex-start;
+}
+.video-controls .options:last-child {
+    justify-content: flex-end;
+}
+.options button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer;
+}
+.options button :where(i) {
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+}
+.options input {
+    height: 4px;
+    max-width: 75px;
+}
+.options .video-timer {
+    font-size: 14px;
+    color: #efefef;
+    margin-left: 15px;
+}
+.video-timer , .no-select {
+    user-select: none;
+    -webkit-user-select : none;
+    -webkit-user-select: none;
+}
+.video-timer p {
+    user-select: none;
+}
+.video-timer .separator {
+    font-size: 16px;
+    margin: 0 5px;
+}
+.playbac-content {
+    position: relative;
+}
+.playbac-content .speed-options{
+    position: absolute;
+    bottom: 40px;
+    left: -40px;
+    width: 95px;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 4px;
+    list-style: none;
+    background: #fff;
+    transition: opacity 0.13s ease;
+}
+.playbac-content .speed-options.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.speed-options li {
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 0 5px 15px;
+}
+.speed-options li.active {
+    background: #3aff8c;
+}
+.container video {
+    width: 100%;
+}
+#video-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+video {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

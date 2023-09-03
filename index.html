@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Video Player</title>
+    <!-- stryle -->
+    <link rel="stylesheet" href="style.css">
+    <!-- remix icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="container show-controls">
+        <div class="wrapper">
+            <div class="video-timeline">
+                <div class="progress-area">
+                    <span>00:00</span>
+                    <div class="progress-bar"></div>
+                </div>
+            </div>
+            <ul class="video-controls">
+
+                <li class="options left">
+                    <button class="volume">
+                        <i class="ri-volume-up-fill"></i>
+                    </button>
+                    <input type="range" style="accent-color: #3aff8c" min="0" max="1" step="any">
+                    <div class="video-timer">
+                        <p class="current-time">00:00</p>
+                        <p class="separator"> / </p>
+                        <p class="video-duration">00:00</p>
+                    </div>
+                </li>
+
+                <li class="options center">
+                    <button class="skip-backward">
+                        <i class="ri-rewind-fill"></i>
+                    </button>
+                    <button class="play-pause">
+                        <i class="ri-play-fill"></i>
+                    </button>
+                    <button class="skip-forward">
+                        <i class="ri-speed-fill"></i>
+                    </button>
+                </li>
+
+                <li class="options right no-select">
+                    <div class="playbac-content">
+                        <button class="playback-speed">
+                            <i class="ri-speed-up-fill"></i>
+                        </button>
+                        <ul class="speed-options">
+                            <li data-speed="2">2x</li>
+                            <li data-speed="1.5">1.5x</li>
+                            <li data-speed="1" class="active">Normal</li>
+                            <li data-speed="0.75">0.75x</li>
+                            <li data-speed="0.5">0.5x</li>
+                        </ul>
+                    </div>
+                    <button class="pic-in-pic">
+                        <i class="ri-picture-in-picture-fill"></i>
+                    </button>
+                    <button class="fullscreen">
+                        <i class="ri-fullscreen-fill"></i>
+                    </button>
+                </li>
+
+            </ul>
+        </div>
+        <img id="video-image" src="image/20230903112536_[fpdl.in]_child-wearing-neon-jacket-white-goggles-stands-dark-room_188449-1880_full.jpg" alt="sorry">
+        <video src="movies/21_Savage_a_lot_Official_Video_ft._J._Cole_DmWWqogr_r8_137.mp4"></video>
+    </div>
+
+
+
+    <!-- script -->
+    <script src="app.js" defer></script>
+
+</body>
+</html>
